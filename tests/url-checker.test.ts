@@ -14,12 +14,12 @@ describe('LinkChecker', () => {
 
     // FIXME
     test('should return true for valid URL with http', () => {
-        expect(linkChecker.isValidUrl('http://www.example.com'))
+        expect(linkChecker.isValidUrl('http://www.example.com:8080')).toBe(true)
     })
 
     // FIXME
     test('should return false for invalid URL with no protocol', () => {
-        expect(linkChecker.isValidUrl('www.example.com')).toBeNaN()
+        expect(linkChecker.isValidUrl('www.example.com/path/to/page')).toBe(false)
     })
 
     // FIXME:
@@ -29,7 +29,7 @@ describe('LinkChecker', () => {
     // })
     //
     // test('should return true for valid URL with path', () => {
-    //     expect(linkCheckker.isValidUrl('http://www.example.com/path/to/page')).toBeFalsy()
+    //     expect(linkChecker.isValidUrl('http://www.example.com/path/to/page')).toBeFalsy()
     // })
 
 })
