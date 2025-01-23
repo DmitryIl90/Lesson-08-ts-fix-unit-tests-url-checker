@@ -3,13 +3,13 @@ import {calculatePasswordStrength} from "../src/Password";
 describe("Calculate Password Strength tests", () => {
 
     test("Check for basic length requirement", () => {
-        expect(calculatePasswordStrength("VESDV45")).toBe("Moderate");
-        expect(calculatePasswordStrength("ASDASDQW")).toBe("Weak");
-        expect(calculatePasswordStrength("QWEQWEQWE")).toBe("Moderate");
-        expect(calculatePasswordStrength("ZXCZXCZXCZX")).toBe("Moderate");
-        expect(calculatePasswordStrength("123451234512")).toBe("Strong");
-        expect(calculatePasswordStrength("1234567890123")).toBe("Strong");
-        expect(calculatePasswordStrength("AKSKDKFKGKFKDKS")).toBe("Strong");
+        expect(calculatePasswordStrength("V11111ff")).toBe("Moderate");
+        expect(calculatePasswordStrength("ASDASDQ2")).toBe("Weak");
+        expect(calculatePasswordStrength("QWEQWEQ1f")).toBe("Moderate");
+        expect(calculatePasswordStrength("ZXCZXCZXC1f")).toBe("Moderate");
+        expect(calculatePasswordStrength("1234512345fF")).toBe("Strong");
+        expect(calculatePasswordStrength("12345678901fF")).toBe("Strong");
+        expect(calculatePasswordStrength("AKSKDKFKGKFKD1f")).toBe("Strong");
     });
     test("Check for digits", () => {
         expect(calculatePasswordStrength("123456789")).toBe("Very Weak");
