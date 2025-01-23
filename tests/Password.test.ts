@@ -21,7 +21,7 @@ describe("Calculate Password Strength tests", () => {
     test("Check for uppercase letters", () => {
         expect(calculatePasswordStrength("ASDFGHJKL")).toBe("Very Weak");
     });
-    test("Check for special characters", () => {
+    test("Check for lowercase, uppercase, digits, special characters and password length >=12", () => {
         expect(calculatePasswordStrength("h_Tmt-W/$!@t0")).toBe("Strong");
     });
     test("Determine password strength level based on strength score", () => {
